@@ -1,0 +1,47 @@
+body { padding: 15px; font-family: helvetica,sans-serif; color: #2d2d2d; }
+span.fauxlink, a { color: #2d2d2d; text-decoration: underline; }
+span.fauxlink:hover,a:hover { text-decoration: none; }
+span.fauxlink { cursor: pointer; }
+
+em { font-family: courier; font-size: 11px; background: #eee; }
+
+div.banner { margin-bottom: 10px; }
+
+h1 { color: #000; font: 34px helvetica,sans-serif; display: inline; margin-right: 10px; line-height: 34px; }
+h1 a { color: #000; text-decoration: none; }
+
+h2 { font: 15px helvetica,sans-serif; display: inline; color: #2d2d2d; line-height: 34px; }
+
+li.photo { float: left; clear: both; padding-bottom: 15px; }
+li.photo div.image { float: left; line-height: 0; }
+li.photo div.image img.photo_big { margin-right: 15px; cursor: pointer; }
+li.photo div.digest { float: left; font: normal 18px/24px helvetica,sans-serif; margin: 0 15px; width: 340px; }
+li.photo div.digest p { margin-bottom: 1em; }
+li.photo div.digest p.tags { font-size: 14px; }
+li.photo div.digest p.date_time { font-weight: bold; line-height: 22px; }
+li.photo div.digest p.linkback { font-size: 11px; }
+li.photo div.digest p.linkback a { color: #aaa; }
+li.photo div.digest span.license { font-size: 9px; color: #aaa; text-transform: lowercase; }
+
+div.footer { clear: both; font-size: 11px; text-align: right; }
+div.footer div.left { float: left; }
+div.footer span.controls, div.footer span.controls .fauxlink { color: #666; }
+
+div.default,div.faq p { font: 12px helvetica,sans-serif; color: #000; line-height: 18px; }
+div.default { width: 460px; }
+div.default h1 { font-size: 12px; line-height: 18px; margin: 0; display: inline; font-weight: bold; }
+div.faq h2 { font-size: 12px; display: block; color: #000; line-height: 18px; font-weight: bold; }
+div.faq p { margin-bottom: 2em; width: 400px; }
+
+img { background: #eee; }
+
+p.dimun, p.timun { font-size: 11px; line-height: 18px; }
+p.dimun, p.timun , p.dimun a, p.timun a { color: #333; }
+p.timun { margin-top: 4px; }
+
+div.singleton img { margin-bottom: 10px; }
+div.singleton div.below p.rights { float: right; text-transform: lowercase; color: #999; font-size: 10px; }
+div.singleton div.below p.rights a { font-size: 11px; }
+
+div.sets { font-size: 12px; line-height: 20px; }
+div.sets ul { margin-top: 1em; }

@@ -1,0 +1,41 @@
+arvika2010:
+   - name: "Arvika"
+   - full_name: "Arvikafestivalen"
+   - year: 2010
+   - sets: [72157624561205186]
+   - date: 20100715
+
+emmaboda2009:
+   - name: "Emmaboda"
+   - full_name: "Emmabodafestivalen"
+   - year: 2009
+   - sets: [72157621845516653]
+   - date: 20090728
+   
+emmaboda2008:
+   - name: "Emmaboda"
+   - full_name: "Emmabodafestivalen"
+   - year: 2008
+   - sets: [72157606579540000]
+   - date: 20080728
+
+arvika2008:
+   - name: "Arvika"
+   - full_name: "Arvikafestivalen"
+   - year: 2008
+   - sets: [72157606561483376]
+   - date: 20090701
+   
+japan:
+   - name: "Japan"
+   - full_name: "Japan"
+   - year: 2009/2010
+   - sets: [72157623079086470]
+   - date: 20091231
+   
+emmaboda2010:
+   - name: "Emmaboda"
+   - full_name: "Emmabodafestivalen"
+   - year: 2010
+   - sets: [72157624522374199]
+   - date: 20100728

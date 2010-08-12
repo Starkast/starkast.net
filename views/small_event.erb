@@ -1,0 +1,29 @@
+<html>
+<head>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Starkast: <%= get_short_title(@event) %></title>
+	<link href="index.css" media="screen" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+<div class="smaller_top"></div>
+
+<div id="container">
+  <h1><a href="/"><%= get_short_title(@event) %></a></h1>
+  <div id="photos">
+    <%= partial(:small_photo, :collection => @photos) %>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7734426-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

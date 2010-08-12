@@ -9,15 +9,16 @@ def get_photos(event)
   list = []
   photos.each do |photo|
     info = flickr.photos.getInfo(:photo_id => photo.id)
-    list << { 
+    list << {
 #     :img_url => FlickRaw.url_z(info),
+      :medium_img_url => FlickRaw.url(info),
       :large_img_url => FlickRaw.url_b(info),
       :photo_page_url => info.urls.url[0]["_content"],
       :title => info.title,
       :description => info.description
     }
-    sizes = flickr.photos.getSizes(:photo_id => photo.id)
-    sizes
+#    sizes = flickr.photos.getSizes(:photo_id => photo.id)
+#    sizes
   end
   list
 end

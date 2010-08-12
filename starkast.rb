@@ -58,6 +58,18 @@ get '/:event' do
   end
 end
 
+get '/small/:event' do
+  @events = read_events
+  if does_event_exist?(params[:event], @events)
+    # render layout
+    @event = get_event(params[:event], @events)
+    @photos = get_photos(@event)
+    erb :small_event
+  else
+    @error = "Sorry"
+  end
+end
+
 not_found do
   @error = "Not found!"
   erb :index

@@ -2,9 +2,11 @@ require 'rubygems'
 require 'sinatra'
 require 'yaml'
 require 'partials'
-require 'flickr.rb'
-require 'helpers.rb'
 require 'sinatra/cache'
+# my code
+require 'flickr.rb'
+require 'vimeo.rb'
+require 'helpers.rb'
 
 helpers Sinatra::Partials
 
@@ -41,13 +43,19 @@ def get_event(newevent, events)
   end
 end
 
+$EVENTS = read_events
+
 get '/' do
-  @events = read_events
+  @events = $EVENTS
   erb :index
 end
 
 get '/:event' do
-  @events = read_events
+  redirect "/#{params[:event]}/"
+end
+
+get '/:event/' do
+  @events = $EVENTS
   if does_event_exist?(params[:event], @events)
     # render layout
     @event = get_event(params[:event], @events)
@@ -58,8 +66,20 @@ get '/:event' do
   end
 end
 
+get '/:event/video' do
+  @events = $EVENTS
+  if does_event_exist?(params[:event], @events)
+    # render layout
+    @event = get_event(params[:event], @events)
+    @videos = get_videos(@event)
+    erb :video_event
+  else
+    @error = "Sorry"
+  end
+end
+
 get '/small/:event' do
-  @events = read_events
+  @events = $EVENTS
   if does_event_exist?(params[:event], @events)
     # render layout
     @event = get_event(params[:event], @events)

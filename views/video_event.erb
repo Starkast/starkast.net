@@ -1,37 +1,22 @@
 <html>
 <head>
-	<title>Starkast</title>
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Starkast: <%= get_short_title(@event) %></title>
 	<link href="/index.css" media="screen" rel="Stylesheet" type="text/css" />
-	<link href="/footer.css" media="screen" rel="Stylesheet" type="text/css" />
 </head>
-
 <body>
+<div class="smaller_top"></div>
 
 <div id="container">
-
-<div class="wrapper">
-
-<% @events.each do |event| %>
-
-<h1>
-  <a href="/<%= get_attr("id", event) %>/">
-    <%= get_short_title(event) %>
-  </a>
-</h1>
-
-<% end %>
-
+  <h1><a href="/"><%= get_short_title(@event) %></a></h1>
+  
+  <%= partial(:menu, :locals => {:event => @event}) %>
+  
+  <div id="photos">
+    <%= partial(:video, :collection => @videos) %>
+  </div>
 </div>
-<div class="footer">
 
-<script language="JavaScript"><!--
-var name = "kontakt";
-var domain = "starkast.net";
-document.write('<p><a href=\"mailto:' + name + '@' + domain + '\">');
-document.write(name + '@' + domain + '</a></p>');
-// --></script>
-
-</div></div>
 
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");

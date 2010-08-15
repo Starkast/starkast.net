@@ -1,7 +1,7 @@
 <html>
 <head>
   <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Starkast: <%= get_short_title(@event) %></title>
+	<title><%= get_short_title(@event) %> - Starkast.net</title>
 	<link href="/index.css" media="screen" rel="Stylesheet" type="text/css" />
 </head>
 <body>
@@ -9,6 +9,9 @@
 
 <div id="container">
   <h1><a href="/"><%= get_short_title(@event) %></a></h1>
+  
+  <%= partial(:menu, :locals => {:event => @event}) %>
+  
   <div id="photos">
     <%= partial(:photo, :collection => @photos) %>
   </div>

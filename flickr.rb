@@ -4,7 +4,7 @@ require 'helpers.rb'
 require 'flickr_apikey.rb'
 
 def get_photos(event)
-  set_id = get_attr("sets", event)[0] 
+  set_id = get_attr("sets", event)[0] # only support one set for now
   photos = flickr.photosets.getPhotos(:photoset_id => set_id).photo
   list = []
   photos.each do |photo|

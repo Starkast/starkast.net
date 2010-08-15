@@ -70,6 +70,16 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  text-align: left;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  padding-top:0;
+  padding-bottom:0;
+  font: normal bold 2em Helvetica;
+  text-transform: uppercase;
+}
+
 #container {
   text-align: left;
   margin-left: 1em;
@@ -86,6 +96,15 @@ h1 {
   background-color: #eee;
   text-align: left;
   width:1024px;
+  padding: 1em 1.5em 1em 1.5em;
+  margin: 1em 1em 1em 1em;
+  margin-left: 0em;
+}
+
+#video {
+  background-color: #eee;
+  text-align: left;
+  width: 1280px;
   padding: 1em 1.5em 1em 1.5em;
   margin: 1em 1em 1em 1em;
   margin-left: 0em;

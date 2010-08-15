@@ -11,9 +11,9 @@ require 'helpers.rb'
 helpers Sinatra::Partials
 
 # NB! you need to set the root of the app first
-set :root, '/Users/dentarg/code/starkast.net'
-set :public, '/Users/dentarg/code/starkast.net/public'
-set :cache_output_dir, '/Users/dentarg/code/starkast.net/public/cache'
+set :root, '/Users/dentarg/code/starkast/starkast.net'
+set :public, '/Users/dentarg/code/starkast/starkast.net/public'
+set :cache_output_dir, '/Users/dentarg/code/starkast/starkast.net/public/cache'
 set :cache_enabled, true  # turn it on
 
 def read_events
@@ -31,6 +31,12 @@ def does_event_exist?(newevent, events)
     end
   end
   return bool
+end
+
+def ends_with_html?(str)
+  p "ends with html"
+  p str
+  str[str.length-4..str.length] == "html"
 end
 
 # Get requested event
@@ -51,6 +57,12 @@ end
 
 get '/:event' do
   redirect "/#{params[:event]}/"
+end
+
+get '/:event/*.html' do
+  if does_event_exist?(params[:event], $EVENTS)
+    send_file("public/cache/#{params[:event]}/#{params[:splat]}.html")
+  end
 end
 
 get '/:event/' do
@@ -91,5 +103,4 @@ end
 
 not_found do
   @error = "Not found!"
-  erb :index
 end

@@ -1,0 +1,23 @@
+div.flickr_photo {
+  margin-bottom: 2em;
+}
+
+p.flickr_title {
+	margin-top: 0.2em;
+	margin-bottom: 0.1em;
+	padding-top: 0.1em;
+	padding-bottom:0;
+	font: normal bold 1.4em Helvetica;
+}
+
+p.flickr_description {
+	margin-top: 0.3em;
+	margin-bottom: 0em;
+	padding-top:0;
+	padding-bottom: 0.2em;
+	font: normal 1em Helvetica;
+}
+
+p a {
+  text-decoration: underline;
+}

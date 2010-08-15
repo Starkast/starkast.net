@@ -13,9 +13,8 @@ helpers Sinatra::Partials
 # NB! you need to set the root of the app first
 set :root, '/Users/dentarg/code/starkast.net'
 set :public, '/Users/dentarg/code/starkast.net/public'
-
+set :cache_output_dir, '/Users/dentarg/code/starkast.net/public/cache'
 set :cache_enabled, true  # turn it on
-
 
 def read_events
   events = YAML::load(File.open('events.yml'))

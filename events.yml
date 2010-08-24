@@ -11,7 +11,7 @@ keepitloud2010:
    - year: 2010
    - sets: [72157624731993222]
    - date: 20100814
-   - vimeo: [14163382, 14174219]
+   - vimeo_album: 781720
 
 arvika2010:
    - name: "Arvika"
@@ -19,7 +19,7 @@ arvika2010:
    - year: 2010
    - sets: [72157624561205186]
    - date: 20100715
-   - vimeo: [13657050]
+   - vimeo_album: 781338
 
 emmaboda2009:
    - name: "Emmaboda"

@@ -9,7 +9,7 @@ def get_attr(attribute, event)
   if attribute == "id"
     return event[0]
   else
-    attributes = { "name" => 0, "full_name" => 1, "year" => 2, "sets" => 3, "date" => 4, "vimeo" => 5 }
+    attributes = { "name" => 0, "full_name" => 1, "year" => 2, "sets" => 3, "date" => 4, "vimeo_album" => 5 }
     index = attributes[attribute]
     return event[1][index][attribute]
   end

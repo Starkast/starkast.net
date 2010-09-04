@@ -5,11 +5,14 @@ def get_attr(attribute, event)
   #  - year: 2010
   #  - sets: [72157624561205186]
   #  - date: 20100728
-  #  - vimeo: [13657050]
+  #  - vimeo_album: [13657050]
+  #  - image_size: "medium"
+  #  - hide_image_title: "yes"
   if attribute == "id"
     return event[0]
   else
-    attributes = { "name" => 0, "full_name" => 1, "year" => 2, "sets" => 3, "date" => 4, "vimeo_album" => 5 }
+    attributes = { "name" => 0, "full_name" => 1, "year" => 2, "sets" => 3, 
+      "date" => 4, "vimeo_album" => 5, "image_size" => 6, "hide_image_title" => 7 }
     index = attributes[attribute]
     return event[1][index][attribute]
   end
@@ -25,6 +28,22 @@ end
 
 def has_attribute(attribute, event)
   return array_to_hash(event[1]).has_key?(attribute)
+end
+
+def has_video(event)
+  if has_attribute("vimeo_album", event)
+    return get_attr("vimeo_album", event) != "nil"
+  else
+    return false
+  end
+end
+
+def hide_image_title(event)
+  return get_attr("hide_image_title", event) == "yes"
+end
+
+def medium_image_size(event)
+  return get_attr("image_size", event) == "medium"
 end
 
 def get_short_title(event)

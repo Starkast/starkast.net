@@ -1,7 +1,13 @@
-<div id="photo">
+<div id="photo_medium">
   <a href="<%= photo[:photo_page_url] %>">
-    <p class="image"><img src="<%= photo[:large_img_url] %>" alt="<%= photo[:title] %>"/></p>
+    <% if medium_image_size(photo[:event]) %>
+      <%= "<p class=\"image\"><img src=\"#{photo[:medium_img_url]}\" alt=\" #{photo[:title]}\" /></p>" %>
+    <% else %>
+      <%= "<p class=\"image\"><img src=\"#{photo[:large_img_url]}\" alt=\" #{photo[:title]}\" /></p>" %>
+    <% end %>
   </a>
-    <p class="title"><%= photo[:title] %></p>
+  <% if !hide_image_title(photo[:event]) %>
+    <%= "<p class=\"title\">#{photo[:title]}</p>" %>
+  <% end %>
     <p class="description"><%= photo[:description] %></p>
 </div>

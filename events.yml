@@ -1,9 +1,22 @@
+arsmote2010:
+   - name: "Starkast årsmöte"
+   - full_name: "Linköpings stadsfest"
+   - year: 2010
+   - sets: [72157624877141084]
+   - date: 20100902
+   - vimeo_album: "nil"
+   - image_size: "medium"
+   - hide_image_title: "yes"
+   
 lkpgstadsfest2010:
    - name: "Lkpg stadsfest"
    - full_name: "Linköpings stadsfest"
    - year: 2010
    - sets: [72157624659881473]
    - date: 20100821
+   - vimeo_album: "nil"
+   - image_size: "large"
+   - hide_image_title: "no"   
 
 keepitloud2010:
    - name: "Keep It Loud"
@@ -12,6 +25,8 @@ keepitloud2010:
    - sets: [72157624731993222]
    - date: 20100814
    - vimeo_album: 781720
+   - image_size: "large"
+   - hide_image_title: "no"   
 
 arvika2010:
    - name: "Arvika"
@@ -20,6 +35,8 @@ arvika2010:
    - sets: [72157624561205186]
    - date: 20100715
    - vimeo_album: 781338
+   - image_size: "large"
+   - hide_image_title: "no"   
 
 emmaboda2009:
    - name: "Emmaboda"
@@ -27,6 +44,9 @@ emmaboda2009:
    - year: 2009
    - sets: [72157621845516653]
    - date: 20090728
+   - vimeo_album: "nil"
+   - image_size: "large"
+   - hide_image_title: "no"   
    
 emmaboda2008:
    - name: "Emmaboda"
@@ -34,6 +54,9 @@ emmaboda2008:
    - year: 2008
    - sets: [72157606579540000]
    - date: 20080728
+   - vimeo_album: "nil"
+   - image_size: "large"
+   - hide_image_title: "no"   
 
 arvika2008:
    - name: "Arvika"
@@ -41,6 +64,9 @@ arvika2008:
    - year: 2008
    - sets: [72157606561483376]
    - date: 20090701
+   - vimeo_album: "nil"
+   - image_size: "large"
+   - hide_image_title: "no"   
    
 japan:
    - name: "Japan"
@@ -48,6 +74,9 @@ japan:
    - year: 2009/2010
    - sets: [72157623079086470]
    - date: 20091231
+   - vimeo_album: "nil"
+   - image_size: "large"
+   - hide_image_title: "no"   
    
 emmaboda2010:
    - name: "Emmaboda"
@@ -55,3 +84,6 @@ emmaboda2010:
    - year: 2010
    - sets: [72157624522374199]
    - date: 20100728
+   - vimeo_album: "nil"
+   - image_size: "large"
+   - hide_image_title: "no"   

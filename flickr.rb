@@ -11,11 +11,12 @@ def get_photos(event)
     info = flickr.photos.getInfo(:photo_id => photo.id)
     list << {
 #     :img_url => FlickRaw.url_z(info),
-      :medium_img_url => FlickRaw.url(info),
+      :medium_img_url => FlickRaw.url_z(info),
       :large_img_url => FlickRaw.url_b(info),
       :photo_page_url => info.urls.url[0]["_content"],
       :title => info.title,
-      :description => info.description
+      :description => info.description,
+      :event => event
     }
 #    sizes = flickr.photos.getSizes(:photo_id => photo.id)
 #    sizes

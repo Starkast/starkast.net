@@ -10,7 +10,10 @@
 <div id="container">
   <h1><a href="/"><%= get_short_title(@event) %></a></h1>
   
-  <%= partial(:menu, :locals => {:event => @event}) %>
+  <%= partial(:menu, :locals => { :event => @event, 
+                                  :num_of_sets => @num_of_sets,
+                                  :set_index => @set_index 
+                                  }) %>
   
   <div id="photos">
     <%= partial(:photo, :collection => @photos) %>

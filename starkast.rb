@@ -65,23 +65,47 @@ get '/:event/*.html' do
   end
 end
 
+# Photos
 get '/:event/' do
   @events = $EVENTS
   if does_event_exist?(params[:event], @events)
     # render layout
     @event = get_event(params[:event], @events)
-    @photos = get_photos(@event)
+    @num_of_sets = get_attr("sets", @event).size
+    @set_index = 0
+    @photos = get_photos(@event, @set_index)
     erb :event
   else
     @error = "Sorry"
   end
 end
 
+# Photos
+get '/:event/photo/:set_index' do
+  @events = $EVENTS
+  if does_event_exist?(params[:event], @events)
+    # render layout
+    @event = get_event(params[:event], @events)
+    @num_of_sets =  get_attr("sets", @event).size
+    @set_index = params[:set_index].to_i
+    if @set_index < @num_of_sets
+      @photos = get_photos(@event, @set_index)
+      erb :event
+    else
+      @error = "Sorry, that set doesn't exist"
+    end
+  else
+    @error = "Sorry"
+  end
+end
+
+# Video
 get '/:event/video' do
   @events = $EVENTS
   if does_event_exist?(params[:event], @events)
     # render layout
     @event = get_event(params[:event], @events)
+    @num_of_sets =  get_attr("sets", @event).size
     @videos = get_videos(@event)
     erb :video_event
   else
@@ -89,11 +113,13 @@ get '/:event/video' do
   end
 end
 
+# Small photos
 get '/small/:event' do
   @events = $EVENTS
   if does_event_exist?(params[:event], @events)
     # render layout
     @event = get_event(params[:event], @events)
+    @num_of_sets =  get_attr("sets", @event).size
     @photos = get_photos(@event)
     erb :small_event
   else

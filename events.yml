@@ -42,7 +42,7 @@ emmaboda2009:
    - name: "Emmaboda"
    - full_name: "Emmabodafestivalen"
    - year: 2009
-   - sets: [72157621845516653]
+   - sets: [72157621955742968, 72157621845516653]
    - date: 20090728
    - vimeo_album: "nil"
    - image_size: "large"
@@ -72,7 +72,7 @@ japan:
    - name: "Japan"
    - full_name: "Japan"
    - year: 2009/2010
-   - sets: [72157623079086470]
+   - sets: [72157623079086470, 72157623184739903]
    - date: 20091231
    - vimeo_album: "nil"
    - image_size: "large"
@@ -82,7 +82,7 @@ emmaboda2010:
    - name: "Emmaboda"
    - full_name: "Emmabodafestivalen"
    - year: 2010
-   - sets: [72157624522374199]
+   - sets: [72157624522374199, 72157624873480000]
    - date: 20100728
    - vimeo_album: 1137217
    - image_size: "large"

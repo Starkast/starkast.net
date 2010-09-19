@@ -4,15 +4,15 @@
 <% if num_of_sets > 1 %>
   <% for i in 0..(num_of_sets-1) %>
     <% if i == set_index %>
-      <%= "<u><a href='/photo/#{i}'>set #{i}</a></u>" %>
+      <%= "<u><a href='/#{event_name}/photo/#{i}'>set #{i}</a></u>" %>
     <% else %>
-      <%= "<a href='/photo/#{i}'>set #{i}</a>" %>
+      <%= "<a href='/#{event_name}/photo/#{i}'>set #{i}</a>" %>
     <% end %>
   <% end %>
 <% end %>
 
 
 <% if has_video(event) %>
-<%= "• <a href=\"video\">video</a>" %>
+<%= "• <a href='/#{event_name}/video'>video</a>" %>
 <% end %>
 </h2>
